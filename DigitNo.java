@@ -1,27 +1,18 @@
 package program;
 import java.util.Scanner;
 public class DigitNo {
-	public static void main(String[] args) 
-	{
-	 int no,a=0;
-	 Scanner sc=new Scanner(System.in);
-	System.out.println("Enter any number : ");
-	 no = sc.nextInt();
-
-	if(no<0)
-	{
-	no=no * -1;
+		private static Scanner sc;
+		
+		public static void main(String[] args) {
+			int Number, Count=0;
+			sc = new Scanner(System.in);		
+			System.out.println("Please Enter any Number: ");
+			Number = sc.nextInt();
+			
+			while(Number > 0) {
+				Number = Number / 10;
+				Count = Count + 1; 
+			}
+			System.out.format("Number of Digits in a Given Number = %d", Count);
+		}
 	}
-	else if(no==0)
-	{
-	no=1;
-	}
-	while(no>0)
-	{
-	no=no/10;
-	a++;
-	}
-	System.out.println("Number of Digits in given number is: "+a);
-	}
-	
-}
